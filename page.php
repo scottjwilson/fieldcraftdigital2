@@ -1,20 +1,20 @@
 <?php
 /**
- * Default page template
+ * Default Page Template
  *
- * @package Fieldcraft
+ * @package Clean_Vite_WP
  */
 
-get_header();
-?>
+get_header(); ?>
 
-<?php while (have_posts()) : the_post(); ?>
+<?php while (have_posts()):
+    the_post(); ?>
 
 <section class="hero" style="padding-bottom: 2rem;">
     <div class="container">
         <div class="hero-content">
             <h1 class="text-hero"><?php the_title(); ?></h1>
-            <?php if (has_excerpt()) : ?>
+            <?php if (has_excerpt()): ?>
                 <p class="hero-subtitle"><?php echo get_the_excerpt(); ?></p>
             <?php endif; ?>
         </div>
@@ -29,6 +29,7 @@ get_header();
     </div>
 </section>
 
-<?php endwhile; ?>
+<?php
+endwhile; ?>
 
 <?php get_footer(); ?>

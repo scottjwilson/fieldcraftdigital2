@@ -5,56 +5,30 @@
         <div class="footer-grid">
             <!-- Brand -->
             <div class="footer-brand">
-                <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo">
-                    <span class="logo-icon" style="background-color: white; color: var(--color-primary-700);">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <circle cx="8" cy="8" r="6" fill="currentColor"/>
-                        </svg>
-                    </span>
-                    Fieldcraft
+                <a href="<?php echo esc_url(
+                    home_url("/"),
+                ); ?>" class="site-logo">
+                    <?php bloginfo("name"); ?>
                 </a>
-                <p>Modern WordPress websites built for growth. Custom development, performance optimization, and business-focused solutions.</p>
+                <p><?php bloginfo("description"); ?></p>
             </div>
 
-            <!-- Product -->
-            <nav class="footer-nav">
-                <h4>Product</h4>
-                <ul>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Integrations</a></li>
-                    <li><a href="#">Changelog</a></li>
-                </ul>
-            </nav>
-
-            <!-- Company -->
-            <nav class="footer-nav">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-
-            <!-- Legal -->
-            <nav class="footer-nav">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Security</a></li>
-                </ul>
-            </nav>
+            <!-- Footer Navigation -->
+            <?php if (has_nav_menu("footer")): ?>
+                <nav class="footer-nav">
+                    <?php wp_nav_menu([
+                        "theme_location" => "footer",
+                        "container" => false,
+                        "depth" => 1,
+                    ]); ?>
+                </nav>
+            <?php endif; ?>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; <?php echo date('Y'); ?> Fieldcraft Digital. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
+            <p>&copy; <?php echo date("Y"); ?> <?php bloginfo(
+     "name",
+ ); ?>. <?php esc_html_e("All rights reserved.", "clean-vite-wp"); ?></p>
         </div>
     </div>
 </footer>

@@ -9,13 +9,7 @@ import "../css/footer.css";
 // Vite will tree-shake unused CSS in production, but we import all for HMR
 import "../css/front-page.css";
 
-// Main JavaScript code
-console.log("Vite is working with HMR!");
-
-/**
- * Fieldcraft Digital Theme
- * Vanilla JavaScript
- */
+// Main JavaScript
 
 (function () {
   "use strict";

@@ -1,6 +1,6 @@
-# Clean Vite WordPress Theme
+# Clean Vite WP
 
-A minimal WordPress theme boilerplate with Vite for modern frontend development.
+A minimal WordPress theme starter with Vite for modern frontend development.
 
 ## Features
 
@@ -51,23 +51,24 @@ This generates a `dist/` directory with:
 ## Project Structure
 
 ```
-clean-vite/
+clean-vite-wp/
 ├── css/
-│   ├── variables.css    # CSS custom properties
-│   ├── base.css         # Base/reset styles
-│   ├── layout.css       # Layout utilities
-│   ├── header.css       # Header styles
-│   ├── footer.css       # Footer styles
-│   └── front-page.css   # Front page styles
+│   ├── variables.css      # CSS custom properties
+│   ├── base.css           # Base/reset styles
+│   ├── layout.css         # Layout utilities
+│   ├── header.css         # Header styles
+│   ├── footer.css         # Footer styles
+│   └── front-page.css     # Front page styles
 ├── js/
-│   └── main.js          # Main entry point (imports CSS)
+│   └── main.js            # Main entry point (imports CSS)
 ├── inc/
-│   ├── theme-setup.php  # Theme configuration
-│   └── vite.php         # Vite integration
-├── dist/                # Production build output
-├── functions.php        # Theme bootstrap
-├── style.css            # Theme metadata
-├── vite.config.js       # Vite configuration
+│   ├── theme-setup.php    # Theme configuration
+│   ├── vite.php           # Vite integration
+│   └── post-types.php     # Custom post type scaffold
+├── dist/                  # Production build output
+├── functions.php          # Theme bootstrap
+├── style.css              # Theme metadata
+├── vite.config.js         # Vite configuration
 └── package.json
 ```
 
@@ -101,11 +102,15 @@ When built with `npm run build`:
 
 Add your code to `js/main.js` or create modules and import them.
 
+### Custom Post Types
+
+Add your post type registrations in `inc/post-types.php`. An example scaffold is provided in the file.
+
 ### Changing the Dev Server Port
 
 Update both:
-- `vite.config.js` - `server.port`
-- `inc/vite.php` - `$vite_server` variable
+- `vite.config.js` — `server.port`
+- `inc/vite.php` — `$vite_server` variable
 
 ## License
 

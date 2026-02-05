@@ -1,7 +1,7 @@
 {
-  "name": "the-theme",
+  "name": "clean-vite-wp",
   "version": "1.0.0",
-  "description": "A minimal WordPress theme boilerplate with Vite",
+  "description": "A minimal WordPress theme starter with Vite",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
