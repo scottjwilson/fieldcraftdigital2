@@ -23,13 +23,20 @@ if ($use_light_header) {
     <div class="container">
         <div class="header-inner">
             <!-- Logo -->
-            <a href="<?php echo esc_url(home_url("/")); ?>" class="site-logo">
-                <span class="logo-mark">F</span>
-                <span>Fieldcraft</span>
+            <a href="<?php echo esc_url(
+                home_url("/"),
+            ); ?>" class="site-logo" aria-label="Fieldcraft Digital Home">
+                <span class="logo-mark">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 8L16 4L24 8V16L16 28L8 16V8Z" fill="currentColor" opacity="0.9"/>
+                        <path d="M16 4L24 8V16L16 12V4Z" fill="currentColor" opacity="0.6"/>
+                        <path d="M16 12L24 16L16 28V12Z" fill="currentColor" opacity="0.3"/>
+                    </svg>
+                </span>
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="nav-desktop">
+            <!-- Navigation -->
+            <nav class="nav-main">
                 <ul class="nav-menu">
                     <li><a href="<?php echo esc_url(
                         home_url("/"),
@@ -52,53 +59,13 @@ if ($use_light_header) {
                 <div class="nav-actions">
                     <a href="<?php echo esc_url(
                         home_url("/contact"),
-                    ); ?>" class="btn btn-accent">
-                        Get in Touch
-                        <?php echo fieldcraft_icon("arrow-right"); ?>
+                    ); ?>" class="btn btn-accent btn-sm">
+                        Contact
                     </a>
                 </div>
             </nav>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
-                <span class="icon-menu"><?php echo fieldcraft_icon(
-                    "menu",
-                    24,
-                ); ?></span>
-                <span class="icon-close"><?php echo fieldcraft_icon(
-                    "close",
-                    24,
-                ); ?></span>
-            </button>
         </div>
     </div>
-
-    <!-- Mobile Navigation -->
-    <nav class="nav-mobile" aria-hidden="true">
-        <a href="<?php echo esc_url(
-            home_url("/"),
-        ); ?>" class="nav-link">Home</a>
-        <a href="<?php echo esc_url(
-            home_url("/services"),
-        ); ?>" class="nav-link">Services</a>
-        <a href="<?php echo esc_url(
-            home_url("/work"),
-        ); ?>" class="nav-link">Work</a>
-        <a href="<?php echo esc_url(
-            home_url("/about"),
-        ); ?>" class="nav-link">About</a>
-        <a href="<?php echo esc_url(
-            home_url("/blog"),
-        ); ?>" class="nav-link">Blog</a>
-        <div class="nav-mobile-actions">
-            <a href="<?php echo esc_url(
-                home_url("/contact"),
-            ); ?>" class="btn btn-accent">
-                Get in Touch
-                <?php echo fieldcraft_icon("arrow-right"); ?>
-            </a>
-        </div>
-    </nav>
 </header>
 
 <main class="main-content">

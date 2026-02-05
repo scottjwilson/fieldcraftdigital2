@@ -20,28 +20,6 @@
   }
 
   // ========================================
-  // MOBILE MENU
-  // ========================================
-  const menuToggle = document.querySelector(".menu-toggle");
-  const mobileNav = document.querySelector(".nav-mobile");
-
-  function toggleMobileMenu() {
-    const isOpen = menuToggle?.getAttribute("aria-expanded") === "true";
-
-    menuToggle?.setAttribute("aria-expanded", !isOpen);
-    mobileNav?.classList.toggle("is-open");
-    mobileNav?.setAttribute("aria-hidden", isOpen);
-    document.body.classList.toggle("menu-open");
-  }
-
-  function closeMobileMenu() {
-    menuToggle?.setAttribute("aria-expanded", "false");
-    mobileNav?.classList.remove("is-open");
-    mobileNav?.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("menu-open");
-  }
-
-  // ========================================
   // REVEAL ANIMATIONS (INTERSECTION OBSERVER)
   // ========================================
   function initRevealAnimations() {
@@ -59,8 +37,6 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          // Optionally unobserve after revealing
-          // revealObserver.unobserve(entry.target);
         }
       });
     }, observerOptions);
@@ -121,9 +97,6 @@
             top: targetPosition,
             behavior: "smooth",
           });
-
-          // Close mobile menu if open
-          closeMobileMenu();
         }
       });
     });
@@ -228,27 +201,6 @@
   }
 
   // ========================================
-  // PARALLAX EFFECT (OPTIONAL)
-  // ========================================
-  function initParallax() {
-    const parallaxElements = document.querySelectorAll("[data-parallax]");
-
-    if (!parallaxElements.length) return;
-
-    function handleParallax() {
-      const scrollY = window.pageYOffset;
-
-      parallaxElements.forEach((el) => {
-        const speed = parseFloat(el.dataset.parallax) || 0.5;
-        const yPos = -(scrollY * speed);
-        el.style.transform = `translate3d(0, ${yPos}px, 0)`;
-      });
-    }
-
-    window.addEventListener("scroll", handleParallax, { passive: true });
-  }
-
-  // ========================================
   // LAZY LOADING IMAGES
   // ========================================
   function initLazyLoad() {
@@ -303,19 +255,6 @@
   function init() {
     // Event listeners
     window.addEventListener("scroll", handleHeaderScroll, { passive: true });
-    menuToggle?.addEventListener("click", toggleMobileMenu);
-
-    // Close mobile menu on nav link click
-    mobileNav?.querySelectorAll(".nav-link").forEach((link) => {
-      link.addEventListener("click", closeMobileMenu);
-    });
-
-    // Close mobile menu on escape key
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        closeMobileMenu();
-      }
-    });
 
     // Initialize features
     handleHeaderScroll(); // Set initial state
@@ -327,9 +266,6 @@
     initFormValidation();
     initLazyLoad();
     setCurrentYear();
-
-    // Optional features
-    // initParallax();
   }
 
   // Run on DOM ready
