@@ -118,7 +118,10 @@ get_header(); ?>
                 <a href="<?php echo esc_url(
                     home_url("/services/web-design"),
                 ); ?>" class="service-link">
-                    Learn more <?php echo fieldcraft_icon("arrow-right", 16); ?>
+                    Learn more<span class="sr-only"> about Web Design</span> <?php echo fieldcraft_icon(
+                        "arrow-right",
+                        16,
+                    ); ?>
                 </a>
             </div>
 
@@ -131,7 +134,10 @@ get_header(); ?>
                 <a href="<?php echo esc_url(
                     home_url("/services/development"),
                 ); ?>" class="service-link">
-                    Learn more <?php echo fieldcraft_icon("arrow-right", 16); ?>
+                    Learn more<span class="sr-only"> about Development</span> <?php echo fieldcraft_icon(
+                        "arrow-right",
+                        16,
+                    ); ?>
                 </a>
             </div>
 
@@ -144,7 +150,10 @@ get_header(); ?>
                 <a href="<?php echo esc_url(
                     home_url("/services/seo"),
                 ); ?>" class="service-link">
-                    Learn more <?php echo fieldcraft_icon("arrow-right", 16); ?>
+                    Learn more<span class="sr-only"> about SEO Strategy</span> <?php echo fieldcraft_icon(
+                        "arrow-right",
+                        16,
+                    ); ?>
                 </a>
             </div>
 
@@ -157,7 +166,10 @@ get_header(); ?>
                 <a href="<?php echo esc_url(
                     home_url("/services/marketing"),
                 ); ?>" class="service-link">
-                    Learn more <?php echo fieldcraft_icon("arrow-right", 16); ?>
+                    Learn more<span class="sr-only"> about Digital Marketing</span> <?php echo fieldcraft_icon(
+                        "arrow-right",
+                        16,
+                    ); ?>
                 </a>
             </div>
 
@@ -170,7 +182,10 @@ get_header(); ?>
                 <a href="<?php echo esc_url(
                     home_url("/services/branding"),
                 ); ?>" class="service-link">
-                    Learn more <?php echo fieldcraft_icon("arrow-right", 16); ?>
+                    Learn more<span class="sr-only"> about Brand Identity</span> <?php echo fieldcraft_icon(
+                        "arrow-right",
+                        16,
+                    ); ?>
                 </a>
             </div>
 
@@ -183,7 +198,10 @@ get_header(); ?>
                 <a href="<?php echo esc_url(
                     home_url("/services/analytics"),
                 ); ?>" class="service-link">
-                    Learn more <?php echo fieldcraft_icon("arrow-right", 16); ?>
+                    Learn more<span class="sr-only"> about Analytics & Insights</span> <?php echo fieldcraft_icon(
+                        "arrow-right",
+                        16,
+                    ); ?>
                 </a>
             </div>
         </div>

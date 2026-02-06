@@ -333,6 +333,32 @@ function fieldcraft_fix_robots_txt(string $output, bool $public): string
 add_filter("robots_txt", "fieldcraft_fix_robots_txt", 100, 2);
 
 /**
+ * Add meta description for SEO
+ */
+function fieldcraft_meta_description(): void
+{
+    if (is_front_page()) {
+        $description =
+            "Fieldcraft Digital is an award-winning agency specializing in web design, development, and digital strategy. We partner with ambitious brands to build products that matter.";
+    } elseif (is_singular()) {
+        $post = get_queried_object();
+        $description =
+            $post->post_excerpt ?:
+            wp_trim_words(strip_tags($post->post_content), 25, "...");
+    } else {
+        $description = get_bloginfo("description");
+    }
+
+    if ($description) {
+        echo '<meta name="description" content="' .
+            esc_attr($description) .
+            '">' .
+            "\n";
+    }
+}
+add_action("wp_head", "fieldcraft_meta_description", 1);
+
+/**
  * Add preconnect for Google Fonts
  */
 function fieldcraft_preconnect_fonts(): void
