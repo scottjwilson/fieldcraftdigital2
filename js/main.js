@@ -20,6 +20,30 @@
   }
 
   // ========================================
+  // DRAWER MENU
+  // ========================================
+  const menuToggle = document.querySelector(".menu-toggle");
+  const drawerClose = document.querySelector(".drawer-close");
+  const drawer = document.querySelector(".drawer");
+  const drawerOverlay = document.querySelector(".drawer-overlay");
+
+  function openDrawer() {
+    drawer?.classList.add("is-open");
+    drawerOverlay?.classList.add("is-active");
+    document.body.classList.add("drawer-open");
+    menuToggle?.setAttribute("aria-expanded", "true");
+    drawer?.setAttribute("aria-hidden", "false");
+  }
+
+  function closeDrawer() {
+    drawer?.classList.remove("is-open");
+    drawerOverlay?.classList.remove("is-active");
+    document.body.classList.remove("drawer-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    drawer?.setAttribute("aria-hidden", "true");
+  }
+
+  // ========================================
   // REVEAL ANIMATIONS (INTERSECTION OBSERVER)
   // ========================================
   function initRevealAnimations() {
@@ -97,6 +121,9 @@
             top: targetPosition,
             behavior: "smooth",
           });
+
+          // Close drawer if open
+          closeDrawer();
         }
       });
     });
@@ -253,11 +280,28 @@
   // INITIALIZE
   // ========================================
   function init() {
-    // Event listeners
+    // Header scroll
     window.addEventListener("scroll", handleHeaderScroll, { passive: true });
+    handleHeaderScroll();
+
+    // Drawer menu
+    menuToggle?.addEventListener("click", openDrawer);
+    drawerClose?.addEventListener("click", closeDrawer);
+    drawerOverlay?.addEventListener("click", closeDrawer);
+
+    // Close drawer on link click
+    drawer?.querySelectorAll(".drawer-link").forEach((link) => {
+      link.addEventListener("click", closeDrawer);
+    });
+
+    // Close drawer on escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeDrawer();
+      }
+    });
 
     // Initialize features
-    handleHeaderScroll(); // Set initial state
     initRevealAnimations();
     initStaggerAnimations();
     initSmoothScroll();
