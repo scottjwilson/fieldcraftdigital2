@@ -20,6 +20,8 @@ $use_light_header =
         "service-single.php",
         "work.php",
         "careers.php",
+        "contact.php",
+        "pricing.php",
     ]);
 if ($use_light_header) {
     $header_class .= " header-light";
