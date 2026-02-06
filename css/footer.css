@@ -83,8 +83,8 @@
 }
 
 /* Navigation Columns */
-.footer-nav h4,
-.footer-contact h4 {
+.footer-nav h3,
+.footer-contact h3 {
     font-family: var(--font-display);
     font-size: var(--text-sm);
     font-weight: 600;
@@ -151,7 +151,7 @@
 
 .footer-bottom p {
     font-size: var(--text-sm);
-    color: var(--color-dark-500);
+    color: var(--color-dark-400);
 }
 
 .footer-links {
@@ -161,7 +161,7 @@
 
 .footer-links a {
     font-size: var(--text-sm);
-    color: var(--color-dark-500);
+    color: var(--color-dark-400);
     transition: color var(--transition-fast);
 }
 

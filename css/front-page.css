@@ -259,7 +259,7 @@
 .clients-label {
     text-align: center;
     font-size: var(--text-sm);
-    color: var(--color-neutral-400);
+    color: var(--color-neutral-600);
     margin-bottom: var(--space-8);
 }
 
@@ -556,7 +556,7 @@
     flex-shrink: 0;
 }
 
-.step-content h4 {
+.step-content h3 {
     font-size: var(--text-lg);
     color: white;
     margin-bottom: var(--space-2);

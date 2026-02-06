@@ -320,6 +320,19 @@ function fieldcraft_body_classes($classes): array
 add_filter("body_class", "fieldcraft_body_classes");
 
 /**
+ * Fix robots.txt: remove unsupported Content-Signal directive
+ */
+function fieldcraft_fix_robots_txt(string $output, bool $public): string
+{
+    $lines = explode("\n", $output);
+    $lines = array_filter($lines, function ($line) {
+        return stripos(trim($line), "content-signal") !== 0;
+    });
+    return implode("\n", $lines);
+}
+add_filter("robots_txt", "fieldcraft_fix_robots_txt", 100, 2);
+
+/**
  * Add preconnect for Google Fonts
  */
 function fieldcraft_preconnect_fonts(): void

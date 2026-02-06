@@ -323,7 +323,7 @@ get_header(); ?>
                 <div class="process-step reveal">
                     <div class="step-number">01</div>
                     <div class="step-content">
-                        <h4>Discovery</h4>
+                        <h3>Discovery</h3>
                         <p>We dive deep into your business, goals, and audience to understand what success looks like.</p>
                     </div>
                 </div>
@@ -331,7 +331,7 @@ get_header(); ?>
                 <div class="process-step reveal reveal-delay-1">
                     <div class="step-number">02</div>
                     <div class="step-content">
-                        <h4>Strategy</h4>
+                        <h3>Strategy</h3>
                         <p>We craft a detailed roadmap that aligns creative solutions with your business objectives.</p>
                     </div>
                 </div>
@@ -339,7 +339,7 @@ get_header(); ?>
                 <div class="process-step reveal reveal-delay-2">
                     <div class="step-number">03</div>
                     <div class="step-content">
-                        <h4>Design & Build</h4>
+                        <h3>Design & Build</h3>
                         <p>Our team brings concepts to life with pixel-perfect design and clean, efficient code.</p>
                     </div>
                 </div>
@@ -347,7 +347,7 @@ get_header(); ?>
                 <div class="process-step reveal reveal-delay-3">
                     <div class="step-number">04</div>
                     <div class="step-content">
-                        <h4>Launch & Grow</h4>
+                        <h3>Launch & Grow</h3>
                         <p>We ensure a smooth launch and provide ongoing support to help your project thrive.</p>
                     </div>
                 </div>

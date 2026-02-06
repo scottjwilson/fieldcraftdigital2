@@ -30,7 +30,7 @@
 
             <!-- Services -->
             <nav class="footer-nav">
-                <h4>Services</h4>
+                <h3>Services</h3>
                 <ul>
                     <li><a href="<?php echo esc_url(
                         home_url("/services/web-design"),
@@ -52,7 +52,7 @@
 
             <!-- Company -->
             <nav class="footer-nav">
-                <h4>Company</h4>
+                <h3>Company</h3>
                 <ul>
                     <li><a href="<?php echo esc_url(
                         home_url("/about"),
@@ -74,7 +74,7 @@
 
             <!-- Contact -->
             <div class="footer-contact">
-                <h4>Get in Touch</h4>
+                <h3>Get in Touch</h3>
                 <ul>
                     <li>
                         <a href="mailto:hello@fieldcraft.digital">
