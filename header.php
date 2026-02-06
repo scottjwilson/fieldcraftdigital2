@@ -46,14 +46,17 @@ if ($use_light_header) {
                         home_url("/services"),
                     ); ?>" class="nav-link">Services</a></li>
                     <li><a href="<?php echo esc_url(
-                        home_url("/work"),
-                    ); ?>" class="nav-link">Work</a></li>
+                        home_url("/features"),
+                    ); ?>" class="nav-link">Features</a></li>
+                    <li><a href="<?php echo esc_url(
+                        home_url("/pricing"),
+                    ); ?>" class="nav-link">Pricing</a></li>
                     <li><a href="<?php echo esc_url(
                         home_url("/about"),
                     ); ?>" class="nav-link">About</a></li>
                     <li><a href="<?php echo esc_url(
-                        home_url("/blog"),
-                    ); ?>" class="nav-link">Blog</a></li>
+                        home_url("/resources"),
+                    ); ?>" class="nav-link">Resources</a></li>
                 </ul>
                 <div class="nav-actions">
                     <a href="<?php echo esc_url(
@@ -110,14 +113,17 @@ if ($use_light_header) {
                 home_url("/services"),
             ); ?>" class="drawer-link">Services</a></li>
             <li><a href="<?php echo esc_url(
-                home_url("/work"),
-            ); ?>" class="drawer-link">Work</a></li>
+                home_url("/features"),
+            ); ?>" class="drawer-link">Features</a></li>
+            <li><a href="<?php echo esc_url(
+                home_url("/pricing"),
+            ); ?>" class="drawer-link">Pricing</a></li>
             <li><a href="<?php echo esc_url(
                 home_url("/about"),
             ); ?>" class="drawer-link">About</a></li>
             <li><a href="<?php echo esc_url(
-                home_url("/blog"),
-            ); ?>" class="drawer-link">Blog</a></li>
+                home_url("/resources"),
+            ); ?>" class="drawer-link">Resources</a></li>
         </ul>
     </div>
     <div class="drawer-footer">
