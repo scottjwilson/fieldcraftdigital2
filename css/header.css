@@ -31,9 +31,27 @@
     color: white;
 }
 
+.site-header.header-light .nav-link:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.site-header.header-light .nav-link.is-active {
+    color: var(--color-accent-400);
+}
+
 .site-header.header-light.is-scrolled .nav-link,
 .site-header.header-light.is-scrolled .site-logo {
     color: var(--color-dark-900);
+}
+
+.site-header.header-light.is-scrolled .nav-link:hover {
+    color: var(--color-dark-900);
+    background: var(--color-neutral-100);
+}
+
+.site-header.header-light.is-scrolled .nav-link.is-active {
+    color: var(--color-primary-600);
 }
 
 .site-header.header-light .menu-toggle {
