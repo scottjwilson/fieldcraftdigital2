@@ -222,7 +222,7 @@ get_header(); ?>
             <article class="work-card work-card-large reveal">
                 <a href="#" class="work-card-link">
                     <div class="work-card-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="TechFlow Dashboard">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&fm=webp&q=80" alt="TechFlow Dashboard" loading="lazy" width="800" height="600">
                         <div class="work-card-overlay">
                             <span class="btn btn-white">View Project <?php echo fieldcraft_icon(
                                 "arrow-up-right",
@@ -241,7 +241,7 @@ get_header(); ?>
             <article class="work-card reveal reveal-delay-1">
                 <a href="#" class="work-card-link">
                     <div class="work-card-image">
-                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=450&fit=crop" alt="Verde Organic">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=450&fit=crop&fm=webp&q=80" alt="Verde Organic" loading="lazy" width="600" height="450">
                         <div class="work-card-overlay">
                             <span class="btn btn-white">View Project <?php echo fieldcraft_icon(
                                 "arrow-up-right",
@@ -260,7 +260,7 @@ get_header(); ?>
             <article class="work-card reveal reveal-delay-2">
                 <a href="#" class="work-card-link">
                     <div class="work-card-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=450&fit=crop" alt="FinanceHub">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=450&fit=crop&fm=webp&q=80" alt="FinanceHub" loading="lazy" width="600" height="450">
                         <div class="work-card-overlay">
                             <span class="btn btn-white">View Project <?php echo fieldcraft_icon(
                                 "arrow-up-right",
@@ -279,7 +279,7 @@ get_header(); ?>
             <article class="work-card reveal">
                 <a href="#" class="work-card-link">
                     <div class="work-card-image">
-                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=450&fit=crop" alt="StartupX">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=450&fit=crop&fm=webp&q=80" alt="StartupX" loading="lazy" width="600" height="450">
                         <div class="work-card-overlay">
                             <span class="btn btn-white">View Project <?php echo fieldcraft_icon(
                                 "arrow-up-right",
@@ -298,7 +298,7 @@ get_header(); ?>
             <article class="work-card reveal reveal-delay-1">
                 <a href="#" class="work-card-link">
                     <div class="work-card-image">
-                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=450&fit=crop" alt="Artisan Coffee">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=450&fit=crop&fm=webp&q=80" alt="Artisan Coffee" loading="lazy" width="600" height="450">
                         <div class="work-card-overlay">
                             <span class="btn btn-white">View Project <?php echo fieldcraft_icon(
                                 "arrow-up-right",
@@ -393,7 +393,7 @@ get_header(); ?>
                     "Fieldcraft transformed our online presence completely. The new website increased our conversions by 340% in just three months. Their attention to detail is unmatched."
                 </blockquote>
                 <div class="testimonial-author">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Sarah Chen">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&fm=webp&q=80" alt="Sarah Chen" loading="lazy" width="100" height="100">
                     <div>
                         <strong>Sarah Chen</strong>
                         <span>CEO, TechFlow</span>
@@ -409,7 +409,7 @@ get_header(); ?>
                     "Working with Fieldcraft was a game-changer for our brand. They didn't just build us a website—they gave us a digital identity that truly represents who we are."
                 </blockquote>
                 <div class="testimonial-author">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Marcus Johnson">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&fm=webp&q=80" alt="Marcus Johnson" loading="lazy" width="100" height="100">
                     <div>
                         <strong>Marcus Johnson</strong>
                         <span>Founder, Verde Organic</span>
@@ -425,7 +425,7 @@ get_header(); ?>
                     "The team at Fieldcraft is exceptional. They took our complex requirements and delivered a solution that was both beautiful and incredibly functional."
                 </blockquote>
                 <div class="testimonial-author">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Emily Rodriguez">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&fm=webp&q=80" alt="Emily Rodriguez" loading="lazy" width="100" height="100">
                     <div>
                         <strong>Emily Rodriguez</strong>
                         <span>CMO, FinanceHub</span>
@@ -444,10 +444,10 @@ get_header(); ?>
         <div class="about-grid">
             <div class="about-images reveal">
                 <div class="about-image about-image-main">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=700&fit=crop" alt="Fieldcraft team at work">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=700&fit=crop&fm=webp&q=80" alt="Fieldcraft team at work" loading="lazy" width="600" height="700">
                 </div>
                 <div class="about-image about-image-accent">
-                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop" alt="Team collaboration">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop&fm=webp&q=80" alt="Team collaboration" loading="lazy" width="400" height="300">
                 </div>
             </div>
 

@@ -359,11 +359,37 @@ function fieldcraft_meta_description(): void
 add_action("wp_head", "fieldcraft_meta_description", 1);
 
 /**
- * Add preconnect for Google Fonts
+ * Load Google Fonts non-blocking with preconnect
  */
-function fieldcraft_preconnect_fonts(): void
+function fieldcraft_load_fonts(): void
 {
-    echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
-    echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
+    $fonts_url =
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap";
+    echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
+    echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' .
+        "\n";
+    echo '<link rel="preload" as="style" href="' .
+        esc_url($fonts_url) .
+        '">' .
+        "\n";
+    echo '<link rel="stylesheet" href="' .
+        esc_url($fonts_url) .
+        '" media="print" onload="this.media=\'all\'">' .
+        "\n";
+    echo '<noscript><link rel="stylesheet" href="' .
+        esc_url($fonts_url) .
+        '"></noscript>' .
+        "\n";
 }
-add_action("wp_head", "fieldcraft_preconnect_fonts", 1);
+add_action("wp_head", "fieldcraft_load_fonts", 1);
+
+/**
+ * Remove unused WordPress block library CSS
+ */
+function fieldcraft_dequeue_block_styles(): void
+{
+    wp_dequeue_style("wp-block-library");
+    wp_dequeue_style("wp-block-library-theme");
+    wp_dequeue_style("global-styles");
+}
+add_action("wp_enqueue_scripts", "fieldcraft_dequeue_block_styles", 200);
