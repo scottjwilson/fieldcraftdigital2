@@ -13,7 +13,14 @@
 // Determine header variant based on template
 $header_class = "site-header";
 $use_light_header =
-    is_front_page() || is_page_template(["about.php", "services.php"]);
+    is_front_page() ||
+    is_page_template([
+        "about.php",
+        "services.php",
+        "service-single.php",
+        "work.php",
+        "careers.php",
+    ]);
 if ($use_light_header) {
     $header_class .= " header-light";
 }

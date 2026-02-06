@@ -393,3 +393,15 @@ function fieldcraft_dequeue_block_styles(): void
     wp_dequeue_style("global-styles");
 }
 add_action("wp_enqueue_scripts", "fieldcraft_dequeue_block_styles", 200);
+
+/**
+ * Redirect /blog to /resources
+ */
+function fieldcraft_redirect_blog(): void
+{
+    if (is_page("blog")) {
+        wp_redirect(home_url("/resources"), 301);
+        exit();
+    }
+}
+add_action("template_redirect", "fieldcraft_redirect_blog");
